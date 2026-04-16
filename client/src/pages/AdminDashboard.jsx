@@ -20,9 +20,13 @@ const AdminDashboard = () => {
   ];
 
   return (
-    <div className="flex min-h-screen bg-[#0f101a]">
+    <div 
+      className="flex min-h-screen bg-cover bg-center bg-fixed relative"
+      style={{ backgroundImage: `url('/assets/images/admin_bg.png')` }}
+    >
+      <div className="absolute inset-0 bg-[#020617]/90 z-0" /> {/* Dark overlay */}
       {/* Sidebar */}
-      <aside className={`fixed inset-y-0 left-0 z-50 w-64 glass border-r border-white/10 transition-transform duration-300 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:relative md:translate-x-0`}>
+      <aside className={`fixed inset-y-0 left-0 z-50 w-64 glass border-r border-white/20 transition-transform duration-300 transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} md:relative md:translate-x-0`}>
         <div className="p-6">
           <div className="flex items-center gap-3 mb-10">
             <div className="w-10 h-10 bg-pink-600 rounded-lg flex items-center justify-center">
@@ -61,7 +65,7 @@ const AdminDashboard = () => {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 flex flex-col min-h-screen">
+      <main className="flex-1 flex flex-col min-h-screen relative z-10">
         <header className="h-20 border-b border-white/10 flex items-center justify-between px-8 glass-card rounded-none sticky top-0 z-40 backdrop-blur-xl">
           <button className="md:hidden text-white" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
             {isSidebarOpen ? <X /> : <Menu />}

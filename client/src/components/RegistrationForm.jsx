@@ -141,8 +141,8 @@ const RegistrationForm = () => {
     }
   };
 
-  const inputClasses = "w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 outline-none focus:border-pink-500 text-white transition-all";
-  const labelClasses = "block text-sm font-medium text-slate-300 mb-1 flex items-center gap-2";
+  const inputClasses = "w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 outline-none focus:border-pink-500/50 focus:bg-white/10 focus:ring-4 focus:ring-pink-500/10 text-white transition-all placeholder:text-slate-500";
+  const labelClasses = "block text-xs font-bold text-slate-400 mb-2 uppercase tracking-widest flex items-center gap-2 ml-1";
 
   return (
     <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="w-full max-w-3xl glass p-8 rounded-2xl shadow-2xl relative">
@@ -187,10 +187,16 @@ const RegistrationForm = () => {
         </div>
         <div>
           <label className={labelClasses}><MapPin size={16} /> Venue</label>
-          <select name="venue" required value={formData.venue} onChange={handleInputChange} className={inputClasses}>
-            <option value="">Select...</option>
-            <option value="Grand Ballroom">Grand Ballroom</option>
-            <option value="Sunset Garden">Sunset Garden</option>
+          <select 
+            name="venue" 
+            required 
+            value={formData.venue} 
+            onChange={handleInputChange} 
+            className={`${inputClasses} cursor-pointer`}
+          >
+            <option value="" disabled className="bg-slate-900 text-slate-400">Select Venue...</option>
+            <option value="Grand Ballroom" className="bg-slate-900 text-white">Grand Ballroom</option>
+            <option value="Sunset Garden" className="bg-slate-900 text-white">Sunset Garden</option>
           </select>
         </div>
         <div className="md:col-span-2">
