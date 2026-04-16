@@ -27,7 +27,7 @@ const Home = () => {
       <RegistrationForm />
       
       <footer className="mt-12 text-slate-500 text-sm">
-        © 2026 Exclusive Events Co. All rights reserved.
+        © 2026 developed by Shreya Exclusive Events Co. All rights reserved.
       </footer>
     </div>
   );
