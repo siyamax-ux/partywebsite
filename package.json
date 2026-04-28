@@ -1,0 +1,20 @@
+{
+  "name": "partywebsite",
+  "version": "1.0.0",
+  "description": "Party Website Deployment",
+  "main": "server/src/index.js",
+  "scripts": {
+    "install-client": "cd client && npm install",
+    "install-server": "cd server && npm install",
+    "install-all": "npm run install-server && npm run install-client",
+    "build-client": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "render-build": "npm run install-all && npm run build-client"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "IsArtifact": false,
+  "Overwrite": true,
+  "TargetFile": "d:\\partywebsite\\package.json"
+}
